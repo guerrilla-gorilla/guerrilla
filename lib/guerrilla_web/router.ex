@@ -3,8 +3,6 @@ defmodule GuerrillaWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-
-    get 'ping', PingController, :ping
   end
 
   scope "/api", GuerrillaWeb do
