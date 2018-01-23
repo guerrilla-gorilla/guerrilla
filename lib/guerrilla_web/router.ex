@@ -7,5 +7,8 @@ defmodule GuerrillaWeb.Router do
 
   scope "/api", GuerrillaWeb do
     pipe_through :api
+
+    get "/ping", PingController, :ping
+    resources "/ads", AdController, except: [:new, :edit]
   end
 end
